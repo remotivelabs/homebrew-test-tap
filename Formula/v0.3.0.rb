@@ -12,6 +12,7 @@ class V030 < Formula
   end
 
   test do
-    system "false"
+    ENV.delete "GITHUB_TOKEN"
+    assert_match "no Github token found", shell_output(bin/"gothanks", 255)
   end
 end
