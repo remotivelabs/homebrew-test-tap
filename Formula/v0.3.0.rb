@@ -11,8 +11,4 @@ class V030 < Formula
     system "go", "build", *std_go_args(ldflags: "-s -w")
   end
 
-  #test do
-  #  ENV.delete "GITHUB_TOKEN"
-  #  assert_match "no Github token found", shell_output(bin/"gothanks", 255)
-  #end
 end
